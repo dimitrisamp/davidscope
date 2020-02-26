@@ -41,15 +41,6 @@ scopeb.test();
 scopea.helloworld("David");
 scopeb.helloworld("Dimitris");
 
-$.ajax({
-    url: ,
-    type: 'json',
-    method: 
-}).done(function (res) {
-    console.log(res)
-})
-
-
 $.get('https://dimitrisamp.github.io/davidscope/scripta.js', function( data ) {
     console.log(data);
 });
