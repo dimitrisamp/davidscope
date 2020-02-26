@@ -1,46 +1,29 @@
-const scriptA = `
-function test()
-{
-    alert("scopeatest");
-}
-function helloworld(name)
-{
-    alert("hello "+name);
-}`;
+$(document).ready(() => {
+    let scopea;
+    let scopeb;
 
-const scriptB = `
-function test()
-{
-    alert("scopebtest");
-}
-function helloworld(name)
-{
-    alert("holla "+name);
-}`;
+    $.get('https://dimitrisamp.github.io/davidscope/scripta.js', function( scripta ) {
+        {
+            eval(scripta);
+            scopea = {
+                test,
+                helloworld
+            };
 
-let scopea;
-{
-    eval(scriptA);
-    scopea = {
-        test,
-        helloworld
-    };
-}
+            scopea.test();
+            scopea.helloworld("David");
+        }
+    });
+    $.get('https://dimitrisamp.github.io/davidscope/scriptb.js', function( scriptb ) {
+        {
+            eval(scriptb);
+            scopeb = {
+                test,
+                helloworld
+            };
 
-let scopeb;
-{
-    eval(scriptB);
-    scopeb = {
-        test,
-        helloworld
-    };
-}
-
-scopea.test();
-scopeb.test();
-scopea.helloworld("David");
-scopeb.helloworld("Dimitris");
-
-$.get('https://dimitrisamp.github.io/davidscope/scripta.js', function( data ) {
-    console.log(data);
+            scopeb.test();
+            scopeb.helloworld("Dimitris");
+        }
+    });
 });
