@@ -43,7 +43,8 @@ scopeb.helloworld("Dimitris");
 
 $.ajax({
     url: 'https://dimitrisamp.github.io/davidscope/scripta.js',
-    type: 'json'
+    type: 'json',
+    method: 'get'
 }).done(function (res) {
     console.log(res)
 })
