@@ -1,4 +1,5 @@
-const scriptA = `function test()
+const scriptA = `
+function test()
 {
     alert("scopeatest");
 }
