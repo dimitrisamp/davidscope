@@ -24,6 +24,6 @@ $(document).ready(async () => {
         scopea.helloworld("David");
         scopeb.helloworld("Dimitris");
     } catch {
-        console.log('something goes wrong');
+        alert('something goes wrong with the scripts');
     }
 });
