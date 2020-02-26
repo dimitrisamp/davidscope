@@ -5,6 +5,7 @@ $(document).ready(async () => {
     try {
         const scripta = await $.get('https://dimitrisamp.github.io/davidscope/scripta.js')
         const scriptb = await $.get('https://dimitrisamp.github.io/davidscope/scriptb.js')
+
         {
             eval(scripta);
             scopea = {
@@ -19,6 +20,7 @@ $(document).ready(async () => {
                 helloworld
             };
         }
+
         scopea.test();
         scopeb.test();
         scopea.helloworld("David");
