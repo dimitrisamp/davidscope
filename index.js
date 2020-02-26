@@ -40,3 +40,10 @@ scopea.test();
 scopeb.test();
 scopea.helloworld("David");
 scopeb.helloworld("Dimitris");
+
+$.ajax({
+    url: 'https://dimitrisamp.github.io/davidscope/scripta.js',
+    type: 'json'
+}).done(function (res) {
+    console.log(res)
+})
