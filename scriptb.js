@@ -4,5 +4,5 @@ function test()
 }
 function helloworld(name)
 {
-    alert("hollb "+name);
+    alert("hello "+name);
 }
